@@ -18,7 +18,8 @@ class TwitterServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('philo/twitter');
+		// laravel 5 tweak
+		// $this->package('philo/twitter');
 	}
 
 	/**
