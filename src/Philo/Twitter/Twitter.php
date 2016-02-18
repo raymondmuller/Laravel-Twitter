@@ -12,8 +12,8 @@ class Twitter extends \TijsVerkoyen\Twitter\Twitter{
 	 */
 	public function __construct()
 	{
-	    $this->setConsumerKey( env('twitter.CONSUMER_KEY', false) );
-	    $this->setConsumerSecret( env('twitter.CONSUMER_SECRET', false) );
+	    $this->setConsumerKey( config('services.twitter.consumer_key', false) );
+	    $this->setConsumerSecret( config('services.twitter.consumer_secret', false) );
 	}
 
 }
