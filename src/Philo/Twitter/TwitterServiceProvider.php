@@ -29,12 +29,9 @@ class TwitterServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-
-		$this->app['twitter'] = $this->app->singleton(function($app)
-		{
+		$this->app->singleton('Twitter', function ($app) {
 			return new Twitter();
 		});
-
 	}
 
 	/**
