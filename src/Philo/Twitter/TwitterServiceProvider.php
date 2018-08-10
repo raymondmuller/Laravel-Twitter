@@ -30,7 +30,7 @@ class TwitterServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-		$this->app['twitter'] = $this->app->share(function($app)
+		$this->app['twitter'] = $this->app->singleton('philo.twitter', function ($app)
 		{
 			return new Twitter();
 		});
